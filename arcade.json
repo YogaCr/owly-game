@@ -1,0 +1,27 @@
+﻿{
+	"name": "Owly Game",
+	"version": "1.0.0.0",
+	"description": "Tugas MPTI",
+	"id": "com.anantagames.owlygame",
+	"viewport-width": 1024,
+	"viewport-height": 720,
+	"author": "Kelompok 2",
+	"email": "",
+	"website": "",
+	"orientations": "any",
+	"c2version": "279",
+	"ife": true,
+	"used-plugins": [
+		"Audio",
+		"Keyboard",
+		"Sprite"
+	],
+	"used-behaviors": [
+		"Platform",
+		"Sin",
+		"destroy",
+		"jumpthru",
+		"scrollto",
+		"solid"
+	]
+}
