@@ -26372,45 +26372,6 @@ cr.behaviors.Sin = function(runtime)
 }());
 ;
 ;
-cr.behaviors.destroy = function(runtime)
-{
-	this.runtime = runtime;
-};
-(function ()
-{
-	var behaviorProto = cr.behaviors.destroy.prototype;
-	behaviorProto.Type = function(behavior, objtype)
-	{
-		this.behavior = behavior;
-		this.objtype = objtype;
-		this.runtime = behavior.runtime;
-	};
-	var behtypeProto = behaviorProto.Type.prototype;
-	behtypeProto.onCreate = function()
-	{
-	};
-	behaviorProto.Instance = function(type, inst)
-	{
-		this.type = type;
-		this.behavior = type.behavior;
-		this.inst = inst;				// associated object instance to modify
-		this.runtime = type.runtime;
-	};
-	var behinstProto = behaviorProto.Instance.prototype;
-	behinstProto.onCreate = function()
-	{
-	};
-	behinstProto.tick = function ()
-	{
-		this.inst.update_bbox();
-		var bbox = this.inst.bbox;
-		var layout = this.inst.layer.layout;
-		if (bbox.right < 0 || bbox.bottom < 0 || bbox.left > layout.width || bbox.top > layout.height)
-			this.runtime.DestroyInstance(this.inst);
-	};
-}());
-;
-;
 cr.behaviors.jumpthru = function(runtime)
 {
 	this.runtime = runtime;
@@ -26617,15 +26578,14 @@ cr.behaviors.solid = function(runtime)
 cr.getObjectRefTable = function () { return [
 	cr.plugins_.Audio,
 	cr.plugins_.Function,
+	cr.plugins_.Keyboard,
 	cr.plugins_.Mouse,
 	cr.plugins_.Particles,
-	cr.plugins_.Keyboard,
+	cr.plugins_.Text,
 	cr.plugins_.Sprite,
 	cr.plugins_.UserMedia,
-	cr.plugins_.Text,
 	cr.behaviors.Platform,
 	cr.behaviors.scrollto,
-	cr.behaviors.destroy,
 	cr.behaviors.solid,
 	cr.behaviors.jumpthru,
 	cr.behaviors.Sin,
@@ -26638,12 +26598,12 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Audio.prototype.acts.Play,
 	cr.system_object.prototype.acts.Wait,
 	cr.system_object.prototype.acts.SubVar,
+	cr.system_object.prototype.acts.SetVar,
 	cr.system_object.prototype.cnds.CompareVar,
 	cr.system_object.prototype.acts.GoToLayout,
 	cr.system_object.prototype.cnds.Else,
 	cr.system_object.prototype.acts.RestartLayout,
 	cr.plugins_.Mouse.prototype.cnds.OnObjectClicked,
-	cr.system_object.prototype.acts.SetVar,
 	cr.plugins_.Text.prototype.acts.SetText,
 	cr.system_object.prototype.acts.SetTimescale,
 	cr.plugins_.Audio.prototype.acts.SetPaused,

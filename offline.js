@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1625070711,
+	"version": 1625112783,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -124,6 +124,7 @@
 		"media/bgm lvl 3_kirby super star race.ogg",
 		"media/bgm lvl 4_golden wind jojo.ogg",
 		"media/bgm lvl 5_megalovania.ogg",
+		"media/bgm main menup_crazy frog - axel f.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
