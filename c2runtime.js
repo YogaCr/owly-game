@@ -26638,6 +26638,7 @@ cr.getObjectRefTable = function () { return [
 	cr.plugins_.Sprite.prototype.cnds.OnDestroyed,
 	cr.plugins_.Function.prototype.acts.CallFunction,
 	cr.system_object.prototype.cnds.OnLayoutStart,
+	cr.plugins_.Text.prototype.acts.SetWebFont,
 	cr.behaviors.Pin.prototype.acts.Pin,
 	cr.plugins_.Sprite.prototype.acts.SetBoolInstanceVar,
 	cr.plugins_.Sprite.prototype.cnds.IsBoolInstanceVarSet,

@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1625112783,
+	"version": 1625114948,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -131,6 +131,8 @@
 		"icon-128.png",
 		"icon-256.png",
 		"loading-logo.png",
+		"baksosapi.otf",
+		"style.css",
 		"adapter.js"
 	]
 }
